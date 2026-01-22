@@ -1,9 +1,9 @@
 /node_modules
 /public/hot
 /public/storage
-/public/themes
 #/storage/*.key
 /storage/app/*
+/storage/debugbar/*
 /storage/framework/cache/*
 /vendor
 .vscode

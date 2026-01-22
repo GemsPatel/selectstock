@@ -8,10 +8,10 @@
     <meta name="robots" content="index, follow">
     <meta property="og:site_name" content="{{ $web_config['company_name'] }}" />
 
-    <meta name="google-site-verification" content="{{getWebConfig('google_search_console_code')}}">
-    <meta name="msvalidate.01" content="{{getWebConfig('bing_webmaster_code')}}">
-    <meta name="baidu-site-verification" content="{{getWebConfig('baidu_webmaster_code')}}">
-    <meta name="yandex-verification" content="{{getWebConfig('yandex_webmaster_code')}}">
+    <meta name="google-site-verification" content="{!!getWebConfig('google_search_console_code')!!}">
+    <meta name="msvalidate.01" content="{!!getWebConfig('bing_webmaster_code')!!}">
+    <meta name="baidu-site-verification" content="{!!getWebConfig('baidu_webmaster_code')!!}">
+    <meta name="yandex-verification" content="{!!getWebConfig('yandex_webmaster_code')!!}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ $web_config['fav_icon']['path'] }}">
@@ -67,6 +67,16 @@
     <link rel="stylesheet" href="{{theme_asset(path: 'public/assets/front-end/css/custom.css')}}">
 
     {!! getSystemDynamicPartials(type: 'analytics_script') !!}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CG0MZ6JLEE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CG0MZ6JLEE');
+    </script>
 </head>
 
 <body class="toolbar-enabled">

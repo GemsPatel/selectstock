@@ -5,10 +5,10 @@
     <meta name="base-url" content="{{ url('/') }}">
     <meta property="og:site_name" content="{{ $web_config['company_name'] }}" />
 
-    <meta name="google-site-verification" content="{{ getWebConfig('google_search_console_code') }}">
-    <meta name="msvalidate.01" content="{{ getWebConfig('bing_webmaster_code') }}">
-    <meta name="baidu-site-verification" content="{{ getWebConfig('baidu_webmaster_code') }}">
-    <meta name="yandex-verification" content="{{ getWebConfig('yandex_webmaster_code') }}">
+    <meta name="google-site-verification" content="{!!getWebConfig('google_search_console_code')!!}">
+    <meta name="msvalidate.01" content="{!!getWebConfig('bing_webmaster_code')!!}">
+    <meta name="baidu-site-verification" content="{!!getWebConfig('baidu_webmaster_code')!!}">
+    <meta name="yandex-verification" content="{!!getWebConfig('yandex_webmaster_code')!!}">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -67,6 +67,16 @@
     </style>
 
     {!! getSystemDynamicPartials(type: 'analytics_script') !!}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CG0MZ6JLEE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CG0MZ6JLEE');
+    </script>
 </head>
 <body class="toolbar-enabled">
 <script>

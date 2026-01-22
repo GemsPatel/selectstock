@@ -25,3 +25,4 @@ temp-data-folder/
 .htaccess
 robots.txt
 sitemap.xml
+/resources/lang/*

@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Utils\Convert;
 use App\Utils\CustomerManager;
 use App\Utils\OrderManager;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Modules\TaxModule\app\Models\SystemTaxSetup;
 use Modules\TaxModule\app\Models\Tax;

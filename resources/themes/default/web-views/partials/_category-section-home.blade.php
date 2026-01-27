@@ -25,7 +25,7 @@
                                                     <img loading="lazy" alt="{{ $category->name }}"
                                                          src="{{ getStorageImages(path: $category->icon_full_url, type: 'category') }}">
                                                 </div>
-                                                <h3 class="text-center max-w-100px mx-auto fs-13 font-semibold mt-2 letter-spacing-0 line--limit-2">{{Str::limit($category->name, 15)}}</h3>
+                                                <h3 class="text-center max-w-200px mx-auto fs-13 font-semibold mt-2 letter-spacing-0 line--limit-1">{{Str::limit($category->name, 15)}}</h3>
                                             </a>
                                         </div>
                                     @endif

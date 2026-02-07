@@ -17,8 +17,16 @@
                                     @if ($category->childes->count() > 0)
                                         <div class="mega_menu z-2">
                                             @foreach ($category->childes as $sub_category)
-                                                <div class="mega_menu_inner">
-                                                    <h6><a href="{{ route('category-products', ['slug' => $sub_category['slug']]) }}">{{$sub_category->name}}</a></h6>
+
+                                                @if ($sub_category->childes->count() >0)
+                                                    <div class="mega_menu_inner resource-top">
+                                                @endif
+
+                                                    <h6>
+                                                        <a href="{{ route('category-products', ['slug' => $sub_category['slug']]) }}">
+                                                            {{$sub_category->name}}
+                                                        </a>
+                                                    </h6>
                                                     @if ($sub_category->childes->count() >0)
                                                         @foreach ($sub_category->childes as $sub_sub_category)
                                                             <div>
@@ -28,7 +36,11 @@
                                                             </div>
                                                         @endforeach
                                                     @endif
-                                                </div>
+
+                                                @if ($sub_category->childes->count() >0)
+                                                    </div>
+                                                @endif
+
                                             @endforeach
                                         </div>
                                     @endif

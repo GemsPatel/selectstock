@@ -17,7 +17,7 @@
                                     @if ($category->childes->count() > 0)
                                         <div class="mega_menu z-2">
                                             @foreach ($category->childes as $sub_category)
-                                                <div class="mega_menu_inner">
+                                                <div class="mega_menu_inner public-top">
                                                     <h6><a href="{{ route('category-products', ['slug' => $sub_category['slug']]) }}">{{$sub_category->name}}</a></h6>
                                                     @if ($sub_category->childes->count() >0)
                                                         @foreach ($sub_category->childes as $sub_sub_category)

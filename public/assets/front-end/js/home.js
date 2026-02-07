@@ -204,7 +204,7 @@ $(document).ready(function () {
                     loop: maxItems > 4
                 },
                 1200: {
-                    items: 6,
+                    items: 4,
                     loop: maxItems > 6
                 },
             },
@@ -419,12 +419,12 @@ $(document).ready(function () {
                     loop: maxItems > 4
                 },
                 992: {
-                    items: 5,
-                    loop: maxItems > 5
+                    items: 4,
+                    loop: maxItems > 4
                 },
                 1200: {
-                    items: 6,
-                    loop: maxItems > 6
+                    items: 4,
+                    loop: maxItems > 4
                 },
             },
             onInitialized: checkNavigationButtons,
@@ -529,7 +529,7 @@ $(document).ready(function () {
             rtl: directionFromSession === "rtl",
             ltr: directionFromSession === "ltr",
             autoplayHoverPause: true,
-            
+
             responsive: {
                 0: {
                     items: 4,
@@ -559,7 +559,7 @@ $(document).ready(function () {
                     items: 12,
                     loop: maxItems > 12
                 },
-            },            
+            },
         });
     })
 

@@ -1015,4 +1015,7 @@ return [
 	"url_field_is_required" => "Url field is required",
 	"please_be_reminded_that,_you_have_to_setup_data_for_these_section_for_Theme_Aster." => "Please be reminded that, you have to setup data for these section for Theme Aster.",
 	"username_is_field_is_required" => "Username is field is required",
+	"please_be_reminded_that,_you_have_to_setup_data_for_these_section_for_Default_Theme." => "Please be reminded that, you have to setup data for these section for Default Theme.",
+	"2_Days_Return_Policy" => "2 Days Return Policy",
+	"Fast_Delivery_all_across_the_india" => "Fast Delivery all across the india",
 ];

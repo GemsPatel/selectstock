@@ -979,7 +979,7 @@
 
                         <div class="row g-3 mt-1">
                             @foreach($relatedProducts as $key => $relatedProduct)
-                                <div class="col-xl-2 col-sm-3 col-6">
+                                <div class="col-xl-4 col-sm-4 col-6">
                                     @include('web-views.partials._inline-single-product-without-eye',['product'=>$relatedProduct,'decimal_point_settings'=>$decimalPointSettings])
                                 </div>
                             @endforeach

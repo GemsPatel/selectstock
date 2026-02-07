@@ -68,7 +68,7 @@
                 <div class="container">
                     <div class="__featured-deal-wrap bg--light px-0-mobile">
                         <div class="d-flex flex-wrap justify-content-between align-items-sm-start gap-8 mb-xxl-4 mb-3">
-                            <div class="w-0 flex-grow-1">
+                            <div class="w-0 grow"> <!-- flex-grow-1 -->
                                 <span class="featured_deal_title font-bold text-dark">{{ translate('featured_deal')}}</span>
                                 <br>
                                 <span class="text-left">{{ translate('see_the_latest_deals_and_exciting_new_offers')}}!</span>

@@ -13,7 +13,7 @@
             <div class="row g-3 {{Session::get('direction') === "rtl" ? '__dir-rtl' : ''}}">
                 <div class="col-lg-9">
                     <div class="h-100 d-flex flex-column gap-4 pb-2">
-                        <div class="card card-body flex-grow-0">
+                        <div class="card card-body grow"> <!-- flex-grow-0 -->
                             <div class="row g-3">
                                 <div class="col-lg-5 col-md-4">
                                     <div class="pd-img-wrap position-relative">
@@ -79,16 +79,16 @@
                                                         <i class="fa fa-share-alt"></i>
                                                     </button>
                                                     <div class="share_dropdown bg-white d-flex gap-3 align-items-center flex-column">
-                                                        <a href="#"  class="flex-shrink-0 btn btn-circle p-0 bg-facebook text-white share-on-social-media share_btn facebook" style="--size: 20px"   data-action="{{route('product',$product->slug)}}"    data-social-media-name="facebook.com/sharer/sharer.php?u=">
+                                                        <a href="#"  class="shrink-0 btn btn-circle p-0 bg-facebook text-white share-on-social-media share_btn facebook" style="--size: 20px"   data-action="{{route('product',$product->slug)}}"    data-social-media-name="facebook.com/sharer/sharer.php?u="> <!-- flex-shrink-0 -->
                                                             <i class="czi-facebook lh-1 fs-10"></i>
                                                         </a>
-                                                        <a href="#" class="flex-shrink-0 btn btn-circle p-0 bg-twitter text-white share-on-social-media share_btn twitter" style="--size: 20px"    data-action="{{route('product',$product->slug)}}" data-social-media-name="twitter.com/intent/tweet?text=">
+                                                        <a href="#" class="shrink-0 btn btn-circle p-0 bg-twitter text-white share-on-social-media share_btn twitter" style="--size: 20px"    data-action="{{route('product',$product->slug)}}" data-social-media-name="twitter.com/intent/tweet?text="> <!-- flex-shrink-0 -->
                                                             <i class="czi-twitter lh-1 fs-10"></i>
                                                         </a>
-                                                        <a href="#" class="flex-shrink-0 btn btn-circle p-0 bg-linkedin text-white share-on-social-media share_btn linkedin" style="--size: 20px"  data-action="{{route('product',$product->slug)}}" data-social-media-name="linkedin.com/shareArticle?mini=true&url=">
+                                                        <a href="#" class="shrink-0 btn btn-circle p-0 bg-linkedin text-white share-on-social-media share_btn linkedin" style="--size: 20px"  data-action="{{route('product',$product->slug)}}" data-social-media-name="linkedin.com/shareArticle?mini=true&url="> <!-- flex-shrink-0 -->
                                                             <i class="czi-linkedin lh-1 fs-10"></i>
                                                         </a>
-                                                        <a href="#" class="flex-shrink-0 btn btn-circle p-0 bg-whatsapp text-white share-on-social-media share_btn whatsapp" style="--size: 20px"  data-action="{{route('product',$product->slug)}}" data-social-media-name="api.whatsapp.com/send?text=">
+                                                        <a href="#" class="shrink-0 btn btn-circle p-0 bg-whatsapp text-white share-on-social-media share_btn whatsapp" style="--size: 20px"  data-action="{{route('product',$product->slug)}}" data-social-media-name="api.whatsapp.com/send?text="> <!-- flex-shrink-0 -->
                                                             <i class="fa fa-whatsapp lh-1 fs-10"></i>
                                                         </a>
                                                     </div>
@@ -252,7 +252,7 @@
                                                 @foreach($product['digital_product_extensions'] as $extensionKey => $extensionGroup)
                                                     <div class="row flex-start mx-0 align-items-center gap-3 flex-nowrap">
                                                         <div
-                                                            class="product-description-label __color-9B9B9B fs-14 text-capitalize flex-shrink-0">
+                                                            class="product-description-label __color-9B9B9B fs-14 text-capitalize shrink-0"> <!-- flex-shrink-0 -->
                                                             {{ translate($extensionKey) }}
                                                         </div>
                                                         <div>
@@ -286,7 +286,7 @@
                                             @foreach (json_decode($product->choice_options) as $key => $choice)
                                                 <div class="row flex-start mx-0  gap-3 flex-nowrap">
                                                     <div
-                                                        class="product-description-label fs-14 __color-9B9B9B text-capitalize flex-shrink-0">{{ $choice->title }}
+                                                        class="product-description-label fs-14 __color-9B9B9B text-capitalize shrink-0">{{ $choice->title }}<!-- flex-shrink-0 -->
                                                     </div>
                                                     <div>
                                                         <div
@@ -465,7 +465,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rtl text-align-direction flex-grow-1">
+                        <div class="rtl text-align-direction grow"> <!-- flex-grow-1-->
                             <div class="__review-overview card card-body h-100">
                                <ul class="nav nav-tabs nav--tabs d-flex justify-content-center gap-2" role="tablist">
                                     <li class="nav-item">
@@ -581,7 +581,7 @@
                                                                 class="__rev-txt"><span
                                                                     class="d-inline-block align-middle text-body">{{ translate('excellent') }}</span>
                                                             </div>
-                                                            <div class="w-0 flex-grow">
+                                                            <div class="w-0 grow"><!-- flex-grow -->
                                                                 <div class="progress text-body __h-5px">
                                                                     <div class="progress-bar web--bg-primary"
                                                                          role="progressbar"
@@ -604,7 +604,7 @@
                                                                 class="__rev-txt"><span
                                                                     class="d-inline-block align-middle ">{{ translate('good') }}</span>
                                                             </div>
-                                                            <div class="w-0 flex-grow">
+                                                            <div class="w-0 grow"> <!-- flex-grow -->
                                                                 <div class="progress __h-5px">
                                                                     <div class="progress-bar web--bg-primary" role="progressbar"
                                                                          style="width: <?php echo $widthRating = ($rating[1] != 0) ? ($rating[1] / $overallRating[1]) * 100 : (0); ?>%; background-color: #a7e453;"
@@ -626,7 +626,7 @@
                                                                 class="__rev-txt"><span
                                                                     class="d-inline-block align-middle ">{{ translate('average') }}</span>
                                                             </div>
-                                                            <div class="w-0 flex-grow">
+                                                            <div class="w-0 grow"> <!-- flex-grow -->
                                                                 <div class="progress __h-5px">
                                                                     <div class="progress-bar web--bg-primary" role="progressbar"
                                                                          style="width: <?php echo $widthRating = ($rating[2] != 0) ? ($rating[2] / $overallRating[1]) * 100 : (0); ?>%; background-color: #ffda75;"
@@ -648,7 +648,7 @@
                                                                 class="__rev-txt "><span
                                                                     class="d-inline-block align-middle">{{ translate('below_Average') }}</span>
                                                             </div>
-                                                            <div class="w-0 flex-grow">
+                                                            <div class="w-0 grow"> <!-- flex-grow -->
                                                                 <div class="progress __h-5px">
                                                                     <div class="progress-bar web--bg-primary" role="progressbar"
                                                                          style="width: <?php echo $widthRating = ($rating[3] != 0) ? ($rating[3] / $overallRating[1]) * 100 : (0); ?>%; background-color: #fea569;"
@@ -670,7 +670,7 @@
                                                                 class="__rev-txt"><span
                                                                     class="d-inline-block align-middle ">{{ translate('poor') }}</span>
                                                             </div>
-                                                            <div class="w-0 flex-grow">
+                                                            <div class="w-0 grow"> <!-- flex-grow -->
                                                                 <div class="progress __h-5px">
                                                                     <div class="progress-bar web--bg-primary" role="progressbar"
                                                                          style="width: <?php echo $widthRating = ($rating[4] != 0) ? ($rating[4] / $overallRating[1]) * 100 : (0); ?>%;"
@@ -754,7 +754,7 @@
                                                              src="{{ getStorageImages(path: $product?->seller?->shop->image_full_url, type: 'shop') }}">
                                                     </div>
                                                     <div
-                                                        class="ms-2 w-0 flex-grow">
+                                                        class="ms-2 w-0 grow"> <!-- flex-grow -->
                                                         <h2 class="fs-15 mb-2">
                                                             {{ $product->seller->shop->name }}
                                                         </h2>

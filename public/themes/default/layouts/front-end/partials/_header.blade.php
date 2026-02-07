@@ -92,8 +92,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand d-none d-sm-block me-3 flex-shrink-0 __min-w-7rem"
-                   href="{{route('home')}}">
+                <a class="navbar-brand d-none d-sm-block me-3 shrink-0  __min-w-7rem"
+                   href="{{route('home')}}"><!-- flex-shrink-0 -->
                     <img class="__inline-11"
                          src="{{ getStorageImages(path: $web_config['web_logo'], type: 'logo') }}"
                          alt="{{$web_config['company_name']}}">
@@ -136,7 +136,7 @@
                     </form>
                 </div>
 
-                <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
+                <div class="navbar-toolbar d-flex shrink-0 align-items-center"> <!-- flex-shrink-0 -->
                     <a class="navbar-tool navbar-stuck-toggler" href="#">
                         <span class="navbar-tool-tooltip">{{ translate('expand_Menu') }}</span>
                         <div class="navbar-tool-icon-box">
